@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Formularz</title>
+	<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+	<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				height: 100vh;
+				background-color: dark-blue;
+				display: flex;
+			}
+			
+			button {
+				position: absolute;
+				right: 85%;
+				top:20%;
+			}
+			
+			ul {
+				margin: auto;
+			}
+			li {
+				color: yellow;
+				display: inline-block;
+				font-size: 40px;
+				font-family: "Monda";
+				font-weight: bold;
+				letter-spacing: 4px;
+				text-shadow: 0 0  22px green, 0 0 10px yellow;
+                transition: : opacity 0.5s;
+				
+			} 
+			
+			li:nth-child(3) {
+				transform: rotate(15deg) translatey(4px);
+				animation: neon 1s infinite linear;
+			}
+            .off {
+                opacity: 0;
+                
+            }
+            @keyframes neon {
+                0% {
+                    opacity: 0;
+                }
+                17% {
+                    opacity: 1
+                }
+                28% {
+                    opacity: 0
+                }
+                45% {
+                    opacity: 1
+                }
+                69%{
+                    opacity: 0
+                } 
+                80% {
+                    opacity: 1
+                }
+                100%{
+                    opacity: 1;
+                
+                }
+				
+			}
+            li:nth-child(10) {
+				transform: rotate(15deg) translatey(4px);
+				animation: neon 1s infinite linear;
+			}
+            .off {
+                opacity: 0;
+                
+            }
+            @keyframes neon {
+                0% {
+                    opacity: 0;
+                }
+                17% {
+                    opacity: 1
+                }
+                28% {
+                    opacity: 0
+                }
+                45% {
+                    opacity: 1
+                }
+                69%{
+                    opacity: 0
+                } 
+                80% {
+                    opacity: 1
+                }
+                100%{
+                    opacity: 1;
+                
+                }
+				
+                
+            }
+            li:nth-child(18) {
+				transform: rotate(15deg) translatey(4px);
+				animation: neon 1s infinite linear;
+			}
+            .off {
+                opacity: 0;
+                
+            }
+            @keyframes neon {
+                0% {
+                    opacity: 0;
+                }
+                17% {
+                    opacity: 1
+                }
+                28% {
+                    opacity: 0
+                }
+                45% {
+                    opacity: 1
+                }
+                69%{
+                    opacity: 0
+                } 
+                80% {
+                    opacity: 1
+                }
+                100%{
+                    opacity: 1;
+                
+                }
+                 
+			}
+		</style>
+
+		<button>Wyłącz</button>
+		<ul>
+		
+			<li>P</li>
+			<li>R</li>
+			<li>O</li>
+			<li>J</li>
+			<li>E</li>
+			<li>K</li>
+			<li>T</li><br>
+			<li>.</li><br>
+			<li>Z</li>
+			<li>A</li>
+			<li>L</li>
+			<li>I</li>
+			<li>C</li>
+			<li>Z</li>
+			<li>E</li>
+			<li>N</li>
+			<li>I</li>
+			<li>O</li>
+			<li>W</li>
+			<li>Y</li>
+			
+		</ul>
+        
+    <script>
+var button =document.querySelector("button")
+    button.addEventListener("click", function()
+    {
+       if(this.textContent =="Włącz") {
+        this.textContent = "Wyłącz"
+       }
+        else {this.textContent = "Włącz";
+        }
+        const letters = document.querySelectorAll("li");
+        for(var i = 0; letters.length > i; i++) {
+            letters[i].classList.toggle("off");
+        }
+    })
+        </script>
+	<!-- Treść komentarza -->
+	<form action="mailto:twój_adres_poczty@domena" method="post" enctype="text/plain"><div>
+<!-- Podstawowe pole tekstowe -->
+<fieldset>
+<legend><span class="italic">Dane personalne</span></legend>
+<p>Podaj imię</p><input name="Imię">
+<p>Podaj nazwisko</p><input name="Nazwisko">
+<p>Adres zamieszkania</p><input name="Adres zamieszkania">
+<p>Podaj adres email</p><input type="e-mail" name="email" required="required">
+<p>Podaj datę urodzenia</p><input type="date" name="date">
+
+</fieldset>
+<!-- Pole typu RADIO -->
+<fieldset >
+<legend><span class="italic">Zaznacz swoją płeć:</span></legend>
+<input type="radio" name="Płeć" value="Kobieta"><p>Kobieta</p>
+<input type="radio" name="Płeć" value="Mężczyzna"><p>Mężczyzna</p>
+<input type="radio" name="Płeć" value="Inna"><p>Inna</p>
+<input type="radio" name="Płeć" value="Nie chcę podawać"><p>Nie chcę podawać</p>
+</fieldset>
+<!-- Pole typu radio -->
+<fieldset>
+<legend><span class="italic">Ile masz lat?</span></legend>
+<input type="radio" name="Wiek" value="Poniżej 15"><p>Poniżej 15</p>
+<input type="radio" name="Wiek" value="15-19"><p>15-19</p>
+<input type="radio" name="Wiek" value="20-29"><p>20-29</p>
+<input type="radio" name="Wiek" value="30-39"><p>30-39</p>
+<input type="radio" name="Wiek" value="Powyżej 50"><p>Powyżej 50</p>
+</fieldset>
+
+
+<!-- Pole typu CHECKBOX -->
+<fieldset>
+<legend><span class="italic">Jaki gatunek filmowy preferujesz ? (możesz zaznaczyć więcej niż jedną odpowiedź)</span></legend>
+<input type="checkbox" name="Filmy" value="Animacja"><p>Animacja</p>
+<input type="checkbox" name="Filmy" value="Akcja"><p>Akcja</p>
+<input type="checkbox" name="Filmy" value="Dramat"><p>Dramat</p>
+<input type="checkbox" name="Filmy" value="Familijny"><p>Familijny</p>
+<input type="checkbox" name="Filmy" value="Historyczny"><p>Historyczny</p>
+<input type="checkbox" name="Filmy" value="Horror"><p>Horror</p>
+<input type="checkbox" name="Filmy" value="Komedia"><p>Komedia</p>
+<input type="checkbox" name="Filmy" value="Kryminał"><p>Kryminał</p>
+<input type="checkbox" name="Filmy" value="Przygodowy"><p>Przygodowy</p>
+<input type="checkbox" name="Filmy" value="Psychologiczny"><p>Psychologiczny</p>
+<input type="checkbox" name="Filmy" value="Sci-fi"><p>Sci-fi</p>
+<input type="checkbox" name="Filmy" value="Sensacyjny"><p>Sensacyjny</p>
+<input type="checkbox" name="Filmy" value="Western"><p>Western</p>
+</fieldset>
+<!-- Lista rozwijana (typ podstawowy) z zaznaczoną opcją domyślną -->
+<fieldset>
+<legend><span class="italic">Jakiej przeglądarki internetowej używasz ?</span></legend>
+<select name="Przeglądarka">
+	<option selected>Chrome</option>
+	<option>Mozilla</option>
+	<option>Microsoft Edge</option>
+	<option>Opera</option>
+	<option>Inna</option>
+</select>
+</fieldset>
+<!-- Lista rozwijana (typ rozszerzony) z zaznaczoną opcją domyślną oraz zmniejszoną wysokością -->
+<fieldset>
+<legend><span class="italic">Jakie znasz systemy operacyjne ? (możesz zaznaczyć kilka opcji przytrzymując klawisz Ctrl)</span></legend>
+<select name="System operacyjny" multiple size="3">
+	<option selected>Windows</option>
+	<option>Linux</option>
+	<option>Dos</option>
+	<option>Inny</option>
+</select>
+</fieldset>
+<!-- Pole komentarza -->
+<fieldset>
+<legend><span class="italic">Napisz kilka słów o sobie</span></legend>
+<textarea name="Komentarz" cols="50" rows="10">Napisz kilka słów o sobie...</textarea>
+<br><br><br> 
+</fieldset>
+<!-- Przycisk wyślij -->
+<input type="submit" value="Wyślij formularz"
+<!-- Przycisk wyczyść dane formularza -->
+<input type="reset" value="Wyczyść dane"
+</div><form>
+	</body
+</html>
